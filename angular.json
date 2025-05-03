@@ -106,15 +106,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "xwiggy-app:serve"
+            "devServerTarget": "vdvs-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "xwiggy-app:serve:production"
+              "devServerTarget": "vdvs-app:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "xwiggy-app"
+  "defaultProject": "vdvs-app"
 }
