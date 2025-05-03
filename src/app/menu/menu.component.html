@@ -1,0 +1,33 @@
+<div class="container-fluid" style="margin: 0 auto; width: 90%;">
+  <br><br>
+  <h1 class="text-center">VDVS | Menu</h1>
+  <br><br>
+
+  <form (ngSubmit)="getTotal()" novalidate>
+    <div class="row">
+      <div *ngFor="let m of model; let i = index" class="col-md-4 mb-4">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" [src]="m.url" alt="{{m.item}}" style="height: 190px;">
+          <div class="card-body">
+            <h5 class="card-title">{{m.item}}</h5>
+            <p class="card-text">Price: Rs.{{m.price}}</p>
+            <p>Quantity Available: {{m.quantity}}</p>
+            <input type="number"
+                   class="form-control"
+                   min="0"
+                   [max]="m.quantity"
+                   [(ngModel)]="values[i].quantity"
+                   name="quantity{{i}}">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <h4 style="color: #efefef;">Cart Total: Rs. {{total || 0}}</h4>
+      <button type="submit" class="btn btn-primary mx-2">Add To Cart</button>
+      <button routerLink="/checkout" type="button" class="btn btn-success mx-2">Buy</button>
+      <button routerLink="/home" type="button" class="btn btn-danger mx-2" (click)="clearLocal()">Log Out</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/bootstrap/dist/css/bootstrap.min.css');
+@import url('../node_modules/font-awesome/css/font-awesome.css');
+/*body{
+  background-color: #3d3737;
+}*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('C:\Users\vamsi\Desktop\food-order-Angular8-SpringBoot-MVC-JPA-MYSQL\vdvs\vdvs-app\src\assets\images\bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(60%) blur(4px); /* Dark + Blur */
+  z-index: -1;
+}
